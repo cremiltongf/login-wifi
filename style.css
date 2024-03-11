@@ -1,0 +1,136 @@
+/* reset */
+*,
+*:before,
+*:after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+/* all */
+html{
+    font-size: 62.5%;
+    font-family: Arial, Tahoma, sans-serif;
+    font-weight: normal;
+    line-height: 1.5;
+    background-color: #fff;
+    color: #333;
+}
+
+/* layout */
+.header{
+    width: 100%;
+    max-width: 48rem;
+    margin: 3.2rem auto 0;
+    padding: 1.6rem;
+}
+
+.brand img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.titulo{
+    margin: 1.6rem 0 1rem;
+}
+
+.formulario-container{
+    width: 100%;
+    max-width: 48rem;
+    margin: 3.2rem auto;
+    padding: 1.6rem;
+}
+
+button{
+    margin-top: 1rem;
+    padding: 1rem 2rem;
+}
+
+.footer{
+    margin-top: 3.2rem;
+    padding: 1.6rem;
+}
+
+@media (max-width: 500px){
+    .header{
+        margin: 0 auto;
+    }
+    .header, 
+    .formulario-container,
+    .footer{
+        padding: 1rem;
+    }
+}
+
+/* styles */
+body{
+    font-size: 2rem;
+}
+
+.header{
+    background-color: #eee;
+    box-shadow: 0px 8px 12px 0px rgba(0, 0, 0, .25);
+}
+
+.formulario-container{
+    background-color: #eee;
+    box-shadow: 0px 8px 12px 0px rgba(0, 0, 0, .25);
+}
+
+.titulo{
+    font-size: 3rem;
+    font-weight: bold;
+    line-height: 1.10;
+}
+
+.subtitulo{
+    font-size: 2.2rem;
+    font-weight: normal;
+}
+
+label,
+input{
+    color: #333;
+}
+
+label{
+    display: block;
+    margin-bottom: .4rem;
+}
+
+input{
+    padding: .6rem;
+    margin-bottom: 1.6rem;
+    width: 100%;
+    height: 4.4rem;
+    font-size: 2rem;
+    border: 1px solid #ccc;
+    border-radius: .4rem;
+}
+
+input:focus, input:focus-visible{
+    background-color: #FFD053;
+    border: 1px solid #398439;
+}
+
+button{
+    text-transform: uppercase;
+    cursor: pointer;
+    color: #fff;
+    background-color: #5cb85c;
+    border: 1px solid #4cae4c;
+    border-radius: .4rem;
+}
+
+button:hover{
+    background-color: #449d44;
+    border: 1px solid #398439;
+}
+
+.texto-footer{
+    margin-top: 3.2rem;
+    text-align: center;
+    font-size: 1.6rem;
+}

@@ -147,6 +147,15 @@ button:hover{
     border: 1px solid #398439;
 }
 
+.aviso{
+    margin: 1.6rem 0;
+}
+
+.aviso p{
+    font-size: 1.6rem;
+    line-height: 1.2;
+}
+
 .texto-footer{
     margin-top: 3.2rem;
     text-align: center;

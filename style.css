@@ -26,6 +26,10 @@ html{
     padding: 1.6rem;
 }
 
+.brand{
+    margin-bottom: 3.2rem;
+}
+
 .brand img{
     display: block;
     max-width: 100%;
@@ -153,7 +157,7 @@ button:hover{
 
 .aviso p{
     font-size: 1.6rem;
-    line-height: 1.2;
+    line-height: 1.22;
 }
 
 .texto-footer{

@@ -61,7 +61,7 @@ html{
 
 button{
     margin-top: 1rem;
-    padding: 1rem 2rem;
+    padding: 1.2rem 2.4rem;
 }
 
 .footer{
@@ -70,6 +70,9 @@ button{
 }
 
 @media (max-width: 500px){
+    body{
+        padding: 1.2rem;
+    }
     .header{
         margin: 0 auto;
     }
@@ -128,8 +131,8 @@ input{
 }
 
 input.save{
-    width: 2rem;
-    height: 2rem;
+    width: 3.2rem;
+    height: 3.2rem;
 }
 
 input:focus, input:focus-visible{

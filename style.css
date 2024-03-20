@@ -161,7 +161,10 @@ button:hover{
 }
 
 .texto-footer{
-    margin-top: 3.2rem;
+    margin: 3.2rem 0;
     text-align: center;
     font-size: 1.6rem;
+}
+.texto-footer p{
+    line-height: 1.6;
 }

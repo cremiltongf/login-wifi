@@ -1,35 +1,40 @@
-// on storage
-let userInStorage = localStorage.userIFPR;
-// set username
-let setUsername = document.querySelector(".username");
+// get username
+let getUsername = document.querySelector(".username");
 // checked on || off
-let setChecked = document.querySelector(".save");
+let statusChecked = document.querySelector(".save");
 
-if (userInStorage) {
-    setUsername.value = localStorage.userIFPR;
-    setChecked.checked = true;
+// restore username
+let restoreUsername = localStorage.userIFPR;
+function restoreEvent(){
+    if (restoreUsername) {
+        getUsername.value = localStorage.userIFPR;
+        statusChecked.checked = true;
+    }
 }
+window.addEventListener("load", restoreEvent);
 
-function actionSetUsername() {
-    if(setChecked.checked){
-        if(setUsername.value === ""){
+// save and remove username
+function actiongetUsername() {
+    if(statusChecked.checked){
+        if(getUsername.value === ""){
             localStorage.userIFPR = "Undefined";
         }
         else {
-            localStorage.userIFPR = setUsername.value;
+            localStorage.userIFPR = getUsername.value;
         }
     } 
     else{
-        setUsername.value = "";
-        setChecked.checked = false;
+        getUsername.value = "";
+        statusChecked.checked = false;
         localStorage.removeItem("userIFPR");
     }
 }
-setChecked.addEventListener("click", actionSetUsername);
+statusChecked.addEventListener("click", actiongetUsername);
 
+// update username
 function updateUser(e) {
-    if(setChecked.checked){
-        localStorage.userIFPR = setUsername.value;
+    if(statusChecked.checked){
+        localStorage.userIFPR = getUsername.value;
     }
 }
-setUsername.addEventListener("change", updateUser);
+getUsername.addEventListener("change", updateUser);

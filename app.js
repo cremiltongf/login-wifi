@@ -1,12 +1,11 @@
 // on storage
-let userOnStorage = localStorage.userIFPR;
+let userInStorage = localStorage.userIFPR;
 // set username
 let setUsername = document.querySelector(".username");
 // checked on || off
 let setChecked = document.querySelector(".save");
-setChecked.checked = false;
 
-if (userOnStorage) {
+if (userInStorage) {
     setUsername.value = localStorage.userIFPR;
     setChecked.checked = true;
 }

@@ -2,12 +2,12 @@
   'use strict';
   let $getUsername = doc.querySelector( '[data-js="username"]' );
   let $statusChecked = doc.querySelector( '[data-js="save"]' );
+  let restoreUsername = localStorage.userIFPR;
 
-  function removeSpace( value ){
+  function removeSpace( value ) {
     return value.replace(/^\s+|\s+$/g, '');
   }
 
-  let restoreUsername = localStorage.userIFPR;
   function restoreDataUser() {
     if ( restoreUsername ) {
       $getUsername.value = localStorage.userIFPR;

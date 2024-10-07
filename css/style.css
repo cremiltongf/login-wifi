@@ -135,6 +135,12 @@ input.save{
     height: 3.2rem;
 }
 
+input.save:focus-visible{
+    outline-offset: 2px;        
+    outline: 4px dashed #398439;
+    border-radius:  6px;
+}
+
 input:focus, input:focus-visible{
     background-color: #FFD053;
     border: 1px solid #398439;
@@ -147,6 +153,12 @@ button{
     background-color: #5cb85c;
     border: 1px solid #4cae4c;
     border-radius: .4rem;
+}
+
+button:focus-visible{
+    outline-offset: 2px;        
+    outline: 4px dashed #398439;
+    border-radius:  6px;
 }
 
 button:hover{

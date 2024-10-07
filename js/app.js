@@ -31,10 +31,12 @@
   }
   $statusChecked.addEventListener( 'click', saveAndDeleteUsername );
 
-  function updateUser( checked ) {
+  function updateUser() {
     if( $statusChecked.checked ) {
       localStorage.userIFPR = removeSpace( $getUsername.value );
       $getUsername.value = localStorage.userIFPR;
+    } else {
+      $getUsername.value = removeSpace( $getUsername.value );
     }
   }
   $getUsername.addEventListener( 'change', updateUser );

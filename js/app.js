@@ -3,6 +3,10 @@
   let $getUsername = doc.querySelector( '[data-js="username"]' );
   let $statusChecked = doc.querySelector( '[data-js="save"]' );
 
+  function removeSpace( value ){
+    return value.replace(/^\s+|\s+$/g, '');
+  }
+
   let restoreUsername = localStorage.userIFPR;
   function restoreDataUser() {
     if ( restoreUsername ) {
@@ -14,13 +18,11 @@
 
   function saveAndDeleteUsername() {
     if( $statusChecked.checked ) {
-      if( $getUsername.value === '' ) {
+      if( $getUsername.value === '' )
         localStorage.userIFPR = 'Undefined';
-      }
-      else {
-        localStorage.userIFPR = $getUsername.value;
-      }
-    } 
+      else
+        localStorage.userIFPR = removeSpace( $getUsername.value );
+    }
     else {
       $getUsername.value = '';
       $statusChecked.checked = false;
@@ -31,7 +33,8 @@
 
   function updateUser( checked ) {
     if( $statusChecked.checked ) {
-      localStorage.userIFPR = $getUsername.value;
+      localStorage.userIFPR = removeSpace( $getUsername.value );
+      $getUsername.value = localStorage.userIFPR;
     }
   }
   $getUsername.addEventListener( 'change', updateUser );

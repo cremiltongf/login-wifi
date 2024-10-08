@@ -18,12 +18,8 @@
 
   function saveAndDeleteUsername() {
     if( $statusChecked.checked ) {
-      if( $getUsername.value === '' )
-        localStorage.userIFPR = 'Undefined';
-      else
-        localStorage.userIFPR = removeSpace( $getUsername.value );
-    }
-    else {
+      $getUsername.value === '' ? localStorage.userIFPR = 'Undefined' : localStorage.userIFPR = removeSpace( $getUsername.value );
+    } else {
       $getUsername.value = '';
       $statusChecked.checked = false;
       localStorage.removeItem( 'userIFPR' );

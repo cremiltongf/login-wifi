@@ -76,7 +76,7 @@ button{
     .header{
         margin: 0 auto;
     }
-    .header, 
+    .header,
     .formulario-container,
     .footer{
         padding: 1rem;
@@ -119,7 +119,7 @@ input{
     margin-bottom: .4rem;
 }
 
-.username, 
+.username,
 .password{
     padding: .6rem;
     margin-bottom: 1.6rem;
@@ -136,7 +136,7 @@ input.save{
 }
 
 input.save:focus-visible{
-    outline-offset: 2px;        
+    outline-offset: 2px;
     outline: 4px dashed #398439;
     border-radius:  6px;
 }
@@ -156,7 +156,7 @@ button{
 }
 
 button:focus-visible{
-    outline-offset: 2px;        
+    outline-offset: 2px;
     outline: 4px dashed #398439;
     border-radius:  6px;
 }

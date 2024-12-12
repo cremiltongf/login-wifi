@@ -14,7 +14,7 @@ html{
     font-family: Arial, Tahoma, sans-serif;
     font-weight: normal;
     line-height: 1.5;
-    background-color: #fff;
+    background: #e8e8e8;
     color: #333;
 }
 
@@ -22,8 +22,9 @@ html{
 .header{
     width: 100%;
     max-width: 48rem;
-    margin: 2.8rem auto 0;
-    padding: 1.6rem;
+    margin: 3.2rem auto;
+    padding: 2rem;
+    border-radius: 1.3rem;
 }
 
 .brand{
@@ -44,7 +45,8 @@ html{
     width: 100%;
     max-width: 48rem;
     margin: 3.2rem auto;
-    padding: 1.6rem;
+    padding: 2rem;
+    border-radius: 1.3rem;
 }
 
 .content-checkbox{
@@ -65,13 +67,12 @@ button{
 }
 
 .footer{
-    margin-top: 3.2rem;
     padding: 1.6rem;
 }
 
-@media (max-width: 500px){
+@media (max-width: 600px){
     body{
-        padding: 1.2rem;
+        padding: 1rem;
     }
     .header{
         margin: 0 auto;
@@ -79,23 +80,19 @@ button{
     .header,
     .formulario-container,
     .footer{
-        padding: 1rem;
+        padding: 1.2rem;
     }
 }
 
 /* styles */
 body{
-    font-size: 2rem;
+    font-size: 1.6rem;
 }
 
-.header{
-    background-color: #eee;
-    box-shadow: 0px 8px 12px 0px rgba(0, 0, 0, .25);
-}
-
+.header,
 .formulario-container{
-    background-color: #eee;
-    box-shadow: 0px 8px 12px 0px rgba(0, 0, 0, .25);
+    background-color: #fff;
+    box-shadow: 0px 187px 75px rgba(0, 0, 0, 0.01), 0px 105px 63px rgba(0, 0, 0, 0.05), 0px 47px 47px rgba(0, 0, 0, 0.09), 0px 12px 26px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
 }
 
 .titulo{
@@ -116,7 +113,7 @@ input{
 
 .content-username label{
     display: block;
-    margin-bottom: .4rem;
+    margin-bottom: .2rem;
 }
 
 .username,
@@ -125,9 +122,9 @@ input{
     margin-bottom: 1.6rem;
     width: 100%;
     height: 4.4rem;
-    font-size: 2rem;
-    border: 1px solid #ccc;
-    border-radius: .4rem;
+    font-size: 1.6rem;
+    border: 1px solid #d5d5d5;
+    border-radius: .5rem;
 }
 
 input.save{
@@ -141,18 +138,19 @@ input.save:focus-visible{
     border-radius:  6px;
 }
 
-input:focus, input:focus-visible{
+input:focus,
+input:focus-visible{
     background-color: #FFD053;
-    border: 1px solid #398439;
+    border: 1px solid #449d44;
 }
 
 button{
     text-transform: uppercase;
     cursor: pointer;
     color: #fff;
-    background-color: #5cb85c;
-    border: 1px solid #4cae4c;
-    border-radius: .4rem;
+    background-color: #359830;
+    border: 1px solid #396F36;
+    border-radius: .5rem;
 }
 
 button:focus-visible{
@@ -162,24 +160,16 @@ button:focus-visible{
 }
 
 button:hover{
-    background-color: #449d44;
-    border: 1px solid #398439;
-}
-
-.aviso{
-    margin: 1.6rem 0;
+    background-color: #396F36;
+    border: 1px solid #359830;
 }
 
 .aviso p{
-    font-size: 1.6rem;
     line-height: 1.22;
+    margin: 1.6rem 0;
 }
 
-.texto-footer{
-    margin: 3.2rem 0;
-    text-align: center;
-    font-size: 1.6rem;
-}
 .texto-footer p{
+    text-align: center;
     line-height: 1.6;
 }

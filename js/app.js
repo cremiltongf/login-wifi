@@ -1,40 +1,41 @@
-(function( win, doc ) {
-  'use strict';
-  let $getUsername = doc.querySelector( '[data-js="username"]' );
-  let $statusChecked = doc.querySelector( '[data-js="save"]' );
-  let restoreUsername = localStorage.userIFPR;
+(function (win, doc) {
+  "use strict";
+  let $getUsername = doc.querySelector('[data-js="username"]');
+  let $statusChecked = doc.querySelector('[data-js="save"]');
+  let $restoreUsername = win.localStorage.getItem("userIFPR");
 
-  function removeSpace( value ) {
-    return value.replace(/^\s+|\s+$/g, '');
+  function removeSpace(value) {
+    return value.replace(/^\s+|\s+$/g, "");
   }
 
   function restoreDataUser() {
-    if ( restoreUsername ) {
-      $getUsername.value = localStorage.userIFPR;
+    if ($restoreUsername) {
+      $getUsername.value = $restoreUsername;
       $statusChecked.checked = true;
     }
   }
-  win.addEventListener( 'load', restoreDataUser );
+  win.addEventListener("load", restoreDataUser);
 
   function saveAndDeleteUsername() {
-    if( $statusChecked.checked ) {
-      $getUsername.value === '' ? localStorage.userIFPR = 'Undefined' : localStorage.userIFPR = removeSpace( $getUsername.value );
+    if ($statusChecked.checked) {
+      $getUsername.value
+        ? win.localStorage.setItem("userIFPR", "")
+        : win.localStorage.setItem("userIFPR", removeSpace($getUsername.value));
     } else {
-      $getUsername.value = '';
+      $getUsername.value = "";
       $statusChecked.checked = false;
-      localStorage.removeItem( 'userIFPR' );
+      win.localStorage.removeItem("userIFPR");
     }
   }
-  $statusChecked.addEventListener( 'click', saveAndDeleteUsername );
+  $statusChecked.addEventListener("click", saveAndDeleteUsername);
 
-  function updateUser() {
-    if( $statusChecked.checked ) {
-      localStorage.userIFPR = removeSpace( $getUsername.value );
-      $getUsername.value = localStorage.userIFPR;
+  function updateUsername() {
+    if ($statusChecked.checked) {
+      win.localStorage.setItem("userIFPR", removeSpace($getUsername.value));
+      $getUsername.value = win.localStorage.getItem("userIFPR");
     } else {
-      $getUsername.value = removeSpace( $getUsername.value );
+      $getUsername.value = removeSpace($getUsername.value);
     }
   }
-  $getUsername.addEventListener( 'change', updateUser );
-
-})( window, document );
+  $getUsername.addEventListener("change", updateUsername);
+})(window, document);

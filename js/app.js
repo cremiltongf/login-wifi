@@ -18,7 +18,7 @@
 
   function saveAndDeleteUsername() {
     if ($statusChecked.checked) {
-      $getUsername.value
+      $getUsername.value === ""
         ? win.localStorage.setItem("userIFPR", "")
         : win.localStorage.setItem("userIFPR", removeSpace($getUsername.value));
     } else {
